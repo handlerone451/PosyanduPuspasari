@@ -54,7 +54,7 @@
                             <tbody>
                                 @foreach($artikels as $artikel)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td><td>{{ $loop->iteration + ($artikels->currentPage() - 1) * $artikels->perPage() }}</td></td>
                                         <td>{{ $artikel->judul }}</td>
                                         <td>{{ \Carbon\Carbon::parse($artikel->created_at)->format('d M Y') }}</td>
                                         <td>
@@ -69,6 +69,9 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        <div class="mt-3">
+                            {{ $artikels->links() }}
+                        </div>
                     </main>
                 </div>
             </div>

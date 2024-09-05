@@ -18,7 +18,7 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        $artikels = Artikel::latest()->get();
+        $artikels = Artikel::orderBy('created_at', 'desc')->paginate(6);
         return view('admin.artikel.index', compact('artikels'));
     }
 
@@ -86,13 +86,15 @@ class ArtikelController extends Controller
         $artikels = Artikel::latest()->take(6)->get();
         $info_sekilas = InfoSekilas::first(); // atau InfoSekilas::find(1);
         $posyandus = Posyandu::all();
-        return view('user.home', compact('artikels', 'info_sekilas', 'posyandus'));
+        $title = "Home";
+        return view('user.home', compact('artikels', 'info_sekilas', 'posyandus', 'title'));
     }
 
 
     public function frontShow(Request $request)
     {
         // Ambil nilai query pencarian dari input
+        $title = "Artikel";
         $search = $request->input('search');
 
         // Jika ada pencarian, filter artikel berdasarkan judul
@@ -105,13 +107,14 @@ class ArtikelController extends Controller
             $artikels = Artikel::orderBy('created_at', 'desc')->paginate(6);
         }
 
-        return view('user.artikel.index', compact('artikels', 'search'));
+        return view('user.artikel.index', compact('artikels', 'search', 'title'));
     }
 
     public function showartikel($slug)
     {
         $artikel = Artikel::where('slug', $slug)->firstOrFail();
-        return view('user.artikel.show', compact('artikel'));
+        $title = "Artikel";
+        return view('user.artikel.show', compact('artikel', 'title'));
     }
     /**
      * Show the form for editing the specified resource.

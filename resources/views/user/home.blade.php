@@ -11,7 +11,7 @@
 <!-- offer section -->
 <div class="landing-page">
   <div class="image-container bg-box">
-    <img src="images/1716920058157.jpg" alt="">
+    <img src="images/Anggrek02.jpeg" alt="">
   </div>
   <div class="container">
     <div class="row">
@@ -63,7 +63,7 @@
                       </tr>
                     </tbody>
                 </table>
-                <a href="">Lihat semua posyandu</a>
+                <a href="{{ route('/DaftarPosyandu')}}">Lihat semua posyandu</a>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@
               <h5 class="mb-2">
                 Kegiatan Posyandu Disekitar
               </h5>
-              <a href="">Lihat Kegiatan</a>
+              <a href="{{ route('/DaftarPosyandu') }}">Lihat Kegiatan</a>
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@
                 <h5 class="mb-2">
                   Lokasi Posyandu Disekitar
                 </h5>
-                <a href="">Lihat Lokasi</a>
+                <a href="{{ route('/DaftarPosyandu') }}#maps">Lihat Lokasi</a>
               </div>
             </div>
           </div>
@@ -183,21 +183,13 @@
     <div class="row">
       <div class="col-md-6">
         <div class="img-box">
-          <img src="images/about-img.png" alt="">
+          <img src="images/logo.png" alt="">
         </div>
       </div>
       <div class="col-md-6">
         <div class="detail-box">
-          <div class="heading_container">
-            <h2>
-              We Are Feane
-            </h2>
-          </div>
           <p>
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-            in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-            are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-            the middle of text. All
+            Bersama Posyandu, kita ciptakan masa depan yang sehat untuk si kecil. Mari kita tingkatkan kualitas hidup bersama, dengan Posyandu sebagai pusat informasi dan pelayanan kesehatan yang ramah dan bersahabat.
           </p>
         </div>
       </div>

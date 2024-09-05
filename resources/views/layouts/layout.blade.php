@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="">
-    <title>@yield('title')</title>
+    <link rel="shortcut icon" href="{{ asset('images/Logo.png') }}" type="">
+    <title>{{$title}}</title>
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -53,6 +53,14 @@
     <!-- End Google Map -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     @yield('scripts')
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('#locationSelect').change(function(){
+            var selectedLocation = $(this).val();
+            $('#mapFrame').attr('src', selectedLocation);
+        });
+    });
+    </script>
 </body>
 </html>

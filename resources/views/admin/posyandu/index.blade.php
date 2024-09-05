@@ -48,7 +48,6 @@
                                     <th>ID</th>
                                     <th>Nama</th>
                                     <th>Alamat</th>
-                                    <th>Kontak</th>
                                     <th>RW</th>
                                     <th>Action</th>
                                 </tr>
@@ -59,9 +58,8 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $posyandu->nama }}</td>
                                         <td>{{ $posyandu->alamat }}</td>
-                                        <td>{{ $posyandu->kontak }}</td>
                                         <td>{{ $posyandu->rw }}</td>
-                                        <td><a href="{{ route('admin.posyandu.show', $posyandu->id) }}">Detail Kegiatan</a></td>
+                                        <td><a href="{{ route('admin.posyandu.show', $posyandu->id) }}" class="btn btn-primary btn-sm text-white">Detail Kegiatan</a></td>
                                     </tr>
                                 @endforeach
                             </tbody>

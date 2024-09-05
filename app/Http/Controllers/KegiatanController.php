@@ -14,7 +14,7 @@ class KegiatanController extends Controller
     public function index()
     {
         $kegiatans = kegiatan::all();
-
+        $title = "Kegiatan";
        // Mengirim data ke view
        return view('admin.posyandu.list_kegiatan', compact('kegiatans'));
     }
@@ -89,6 +89,6 @@ class KegiatanController extends Controller
         $kegiatan->delete();
 
         // Redirect ke halaman daftar artikel dengan pesan sukses
-        return redirect()->route('admin.posyandu.kegiatan.index')->with('success', 'Kegiatan berhasil dihapus.');
+        return redirect(url()->previous())->with('success', 'Kegiatan berhasil dihapus.');
     }
 }

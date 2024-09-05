@@ -11,7 +11,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 text-center">
-                    {{ __("List Posyandu") }}
+                    {{ __("List Kegiatan ") }}{{ $posyandu->nama }}
                 </div>
             </div>
         </div>
@@ -53,9 +53,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($posyandu->kegiatan as $kegiatan)
+                                @php
+                                    $currentPage = $kegiatanPaginated->currentPage();  // Mendapatkan halaman saat ini
+                                    $perPage = $kegiatanPaginated->perPage();          // Jumlah item per halaman
+                                    $start = ($currentPage - 1) * $perPage + 1;        // Menghitung nomor urut awal
+                                @endphp
+                                @foreach($kegiatanPaginated as $kegiatan)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $loop->iteration + ($kegiatanPaginated->currentPage() - 1) * $kegiatanPaginated->perPage() }}</td>
                                         <td>{{ $kegiatan->judul }}</td>
                                         <td>{{ \Illuminate\Support\Str::limit($kegiatan->deskripsi, 50, '...') }}</td>
                                         <td>{{ \Carbon\Carbon::parse($kegiatan->tanggal)->format('d M Y') }}</td>
@@ -71,6 +76,9 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        <div class="mt-3">
+                            {{ $kegiatanPaginated->links() }}
+                        </div>
                     </main>
                 </div>
             </div>

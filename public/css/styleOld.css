@@ -1,4 +1,4 @@
-@import 'normalize.css';
+
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap");
 body {
   font-family: "Open Sans", sans-serif;
@@ -16,17 +16,6 @@ input[type="file"] {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Efek bayangan opsional */
 }
 
-.welcome-text h1 {
-  color: white;
-  font-weight: bold;
-  text-align: left;
-  -webkit-text-stroke: 1px black; /* Memberikan outline hitam pada teks */
-}
-
-
-.container{
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
 .form-control {
   border-radius: 10px;
 }
@@ -93,32 +82,8 @@ a {
   .image-container {
       padding-top: 75%; /* 4:3 aspect ratio */
   }
-  .button-kegiatan{
-    position: absolute;
-    top: 400px !important;
-    left: 140px !important;
-    width: 100px;
-    height: 40px;
-    border-radius: 15px;
-    background: #ff38a2;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center; 
-            align-items: center;
-            text-align: center;
-  }
+
   
-  .card-page-posyandu{
-    background: linear-gradient(to bottom, #f1f2f3 25px, #222831 25px);
-    color: #ffffff;
-    height: 450px; /* Atur tinggi sesuai kebutuhan */
-    margin-bottom: 50px !important;
-  }
 }
 
 .heading_daftar_posyandu h2 {
@@ -126,7 +91,6 @@ a {
   margin-bottom: -10px;
   font-size: 2.5rem;
   font-weight: bold;
-  margin-top: -40px;
 }
 
 .heading_daftar_kegiatan h2 {
@@ -280,7 +244,7 @@ a:focus {
 }
 
 .about-us {
-  margin-top: 400px;
+  margin-top: 200px;
 }
 
 .about-us-text{
@@ -315,7 +279,7 @@ a:focus {
   overflow: hidden; /* Menjaga agar elemen di dalam card tidak keluar dari batas */
   background-color: #007bff; /* Warna biru */
   color: white; /* Teks warna putih */
-  margin-top: 150px;
+  margin-top: 350px;
 }
 
 .card-artikel {
@@ -335,13 +299,12 @@ a:focus {
 /* Media query for mobile */
 @media (max-width: 767px) {
   .about-card {
-    margin-top: 300px;
+    margin-top: 500px;
   }
   .box{
     height: 350px !important;
   }
 }
-
 
 /* Media query for mobile */
 @media (max-width: 767px) {
@@ -402,7 +365,7 @@ a:focus {
   background-color: #ffffff;
   height: 300px; /* Atur tinggi sesuai kebutuhan */
   color: #000000;
-  margin-top: -340px;
+  margin-top: -140px;
   display: flex;
   flex-direction: column;
   justify-content: center; /* Untuk vertikal centering */
@@ -1432,3 +1395,4 @@ a:focus {
 .galeri-h2{
   margin-bottom: 100px;
 }
+

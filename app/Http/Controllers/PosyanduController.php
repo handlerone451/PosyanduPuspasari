@@ -24,9 +24,9 @@ class PosyanduController extends Controller
     {
         // Mengambil semua data posyandu dari database
         $posyandus = Posyandu::all();
-
+        $title = "Daftar Posyandu";
         // Mengirim data ke view
-        return view('user.daftarPosyandu', compact('posyandus'));
+        return view('user.daftarPosyandu', compact('posyandus', 'title'));
     }
 
     /**
@@ -52,16 +52,19 @@ class PosyanduController extends Controller
     {
         $posyandu = Posyandu::with(['kegiatan' => function ($query) {
             $query->orderBy('created_at', 'desc');
-        }])->findOrFail($id);    
-        return view('admin.posyandu.kegiatan.index', compact('posyandu'));
+        }])->findOrFail($id);
+
+        // Mengambil kegiatan dengan pagination
+        $kegiatanPaginated = $posyandu->kegiatan()->paginate(10); // Ganti 10 dengan jumlah yang diinginkan per halaman   
+        return view('admin.posyandu.kegiatan.index', compact('posyandu', 'kegiatanPaginated'));
     }
 
     public function showByNama($nama)
     {
         $posyandu = Posyandu::where('nama', $nama)->firstOrFail();
         $kegiatans = $posyandu->kegiatan()->orderBy('created_at', 'desc')->paginate(5);
-
-        return view('user.posyandu.index', compact('posyandu', 'kegiatans'));
+        $title = "Kegiatan";
+        return view('user.posyandu.index', compact('posyandu', 'kegiatans', 'title'));
     }
 
 

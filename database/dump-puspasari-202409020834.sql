@@ -42,7 +42,6 @@ CREATE TABLE `artikel` (
 
 LOCK TABLES `artikel` WRITE;
 /*!40000 ALTER TABLE `artikel` DISABLE KEYS */;
-INSERT INTO `artikel` VALUES (1,'Pkk Kalbar Siapkan Strategi Perkuat Posyandu Di Desa 2025','pkk-kalbar-siapkan-strategi-perkuat-posyandu-di-desa-2025','PKK Kalbar Siapkan Strategi Perkuat Posyandu di Desa 2025PKK Kalbar Siapkan Strategi Perkuat Posyandu di Desa 2025','1725006921.jpg',NULL,'2024-08-30 08:35:21','2024-08-30 08:35:21'),(2,'Pkk Kalbar Siapkan Strategi Perkuat Posyandu Di Desa 2026','pkk-kalbar-siapkan-strategi-perkuat-posyandu-di-desa-2026','PKK Kalbar Siapkan Strategi Perkuat Posyandu di Desa 2026','1725007818.jpg',NULL,'2024-08-30 08:50:18','2024-08-30 08:50:18'),(3,'Aku Adalah Aku Dan Aku Adalah Aku','aku-adalah-aku-dan-aku-adalah-aku','PKK Kalbar Siapkan Strategi Perkuat Posyandu di Desa 2026','1725007834.jpg',NULL,'2024-08-30 08:50:34','2024-08-30 08:50:34');
 /*!40000 ALTER TABLE `artikel` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -149,7 +148,7 @@ CREATE TABLE `info_sekilas` (
 
 LOCK TABLES `info_sekilas` WRITE;
 /*!40000 ALTER TABLE `info_sekilas` DISABLE KEYS */;
-INSERT INTO `info_sekilas` VALUES (1,15,99,1200,350,'https://www.youtube.com/embed/dyNcLY9GZX4?si=vI961KS7OC0NPKUK','2024-08-30 07:27:47','2024-08-30 07:31:21');
+INSERT INTO `info_sekilas` VALUES (1,15,99,1200,350,'https://www.youtube.com/embed/aRnbQ5taC8c?si=9S5-KY6UYXonbpMo','2024-08-30 07:27:47','2024-09-02 01:24:37');
 /*!40000 ALTER TABLE `info_sekilas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -231,7 +230,7 @@ CREATE TABLE `kegiatan` (
   PRIMARY KEY (`id`),
   KEY `kegiatan_posyandu_id_foreign` (`posyandu_id`),
   CONSTRAINT `kegiatan_posyandu_id_foreign` FOREIGN KEY (`posyandu_id`) REFERENCES `posyandu` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -481,7 +480,7 @@ CREATE TABLE `sessions` (
 
 LOCK TABLES `sessions` WRITE;
 /*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
-INSERT INTO `sessions` VALUES ('Y2xxUiNzK8axpGNm668mrW2oguLh3HVK7mdnfeLW',1,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0','YTo1OntzOjY6Il90b2tlbiI7czo0MDoiQ1hOVU1aWTVadHpXVUtSZHdWemhmamVvZllIcUJiOGY1TjR1UDFRMiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTk6Imh0dHA6Ly9wb3N5YW5kdS5jb20iO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjM6InVybCI7YTowOnt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9',1725009625);
+INSERT INTO `sessions` VALUES ('rIWVWDZD3LQ0EKc7uLmaJSnUlJyraNMuDYHIEPFA',1,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0','YTo0OntzOjY6Il90b2tlbiI7czo0MDoiV2gxcHRvRU1RNU9pbDJ0RDRKQnJHbHJxeldwRWI5V2pLSGRxNkM4cyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjk6Imh0dHA6Ly9wb3N5YW5kdS5jb20vZGFzaGJvYXJkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9',1725240810);
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -529,4 +528,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-08-31 14:56:07
+-- Dump completed on 2024-09-02  8:34:37

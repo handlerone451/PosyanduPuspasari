@@ -88,7 +88,7 @@ class InfosekilasController extends Controller
     
                     if ($videoId) {
                         // Ganti dengan API Key Anda
-                        $apiKey = 'AIzaSyDostn2nQdff26gh0gNdpApQ980RpkRc-U';
+                        $apiKey = 'AIzaSyAKi2dXXyGILFyj_zKkb2GazRIYslyIyjU';
     
                         // Kirim permintaan untuk memeriksa video
                         $response = Http::get("https://www.googleapis.com/youtube/v3/videos", [
