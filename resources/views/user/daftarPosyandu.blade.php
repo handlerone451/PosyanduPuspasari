@@ -20,36 +20,34 @@
       </h2>
     </div>
     <div class="row">
-      @foreach($posyandus as $posyandu)
-          <div class="col-md-4 mb-4">
-              <div class="card card-page-posyandu shadow-box">
-                @if($posyandu->gambar)
-                      <a href=""><img src="{{ asset('storage/posyandu_images/' . $posyandu->gambar) }}" class="card-img-top posyandu-img" alt="{{ $posyandu->nama }}"></a>
-                  @else
-                      <img src="https://via.placeholder.com/150" class="card-img-top" alt="{{ $posyandu->nama }}">
-                  @endif            
-                  <div class="card-body">
-                      <h5>
-                        {{ $posyandu->nama }}
-                      </h5>
-                      <p>
-                        {{ $posyandu->alamat }} RW {{ $posyandu->rw }}
-                      </p>
-                      <div class="justify-content-center button-kegiatan">
-                        <a href="{{ route('posyandu.show_by_nama', $posyandu->nama) }}" class="text-white">
-                          Kegiatan
-                        </a>
-                      </div>
-                  </div>
+<div class="container mt-5">
+  <div class="row">
+    @foreach($posyandus as $posyandu)
+      <div class="col-md-4 mb-4">
+        <div class="card card-page-posyandu shadow-box">
+          @if($posyandu->gambar)
+            <a href=""><img src="{{ asset('storage/posyandu_images/' . $posyandu->gambar) }}" class="card-img-top posyandu-img" alt="{{ $posyandu->nama }}"></a>
+          @else
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="{{ $posyandu->nama }}">
+          @endif       
+          <div class="card-body text-center">
+              <h5 class="card-title">{{ $posyandu->nama }}</h5>
+              <p class="card-text card-text-posyandu">{{ $posyandu->alamat }} RW {{ $posyandu->rw }}</p>
+              <div class="btn-container">
+                <a href="{{ route('posyandu.show_by_nama', $posyandu->nama) }}" class="btn btn-primary btn-posyandu">Kegiatan</a>
               </div>
           </div>
-          @endforeach
+        </div>
+      </div>
+      @endforeach
+  </div>
+</div>
 </section>
 {{-- maps section --}}
 <section class="mb-4" id="maps">
-  <div class="row justify-content-center mb-2">
-    <h1 class="text-center">Lokasi RW</h1>
-    <div class="col-md-6 col-sm-4">
+  <div class="row justify-content-center">
+    <div class="col-md-2 col-sm-4">
+      <h1 class="text-center">Lokasi RW</h1>
       <select id="locationSelect" class="form-control select-location">
         <option value="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3964.415207476862!2d106.87579157499238!3d-6.468971493522721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMjgnMDguMyJTIDEwNsKwNTInNDIuMSJF!5e0!3m2!1sid!2sid!4v1725189164168!5m2!1sid!2sid">RW 04</option>
         <option value="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3964.325857049712!2d106.8733886749926!3d-6.480350293511529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMjgnNDkuMyJTIDEwNsKwNTInMzMuNSJF!5e0!3m2!1sid!2sid!4v1725189235844!5m2!1sid!2sid">RW 08</option>

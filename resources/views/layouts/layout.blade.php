@@ -30,7 +30,7 @@
 
     <script src="{{ asset('path-to-your-bootstrap-js') }}"></script>
     <!-- footer section -->
-
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- jQery -->
     <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
     <!-- popper js -->

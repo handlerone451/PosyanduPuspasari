@@ -37,7 +37,7 @@ class ArtikelController extends Controller
     {
         $request->validate([
             'judul' => 'required|string|max:100|min:10|unique:artikel,slug',
-            'isi' => 'required|string|min:10',
+            'isi' => 'required|string|min:1500',
             'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ], 
         [
@@ -127,7 +127,7 @@ class ArtikelController extends Controller
     {
         $request->validate([
             'judul' => 'required|string|max:100|min:10|unique:artikel,slug',
-            'isi' => 'required|string|min:10',
+            'isi' => 'required|string|min:1500',
             'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ], 
         [

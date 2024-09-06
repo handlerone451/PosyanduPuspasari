@@ -78,7 +78,7 @@
         <div class="col-md-6  ">
           <div class="box ">
             <div class="img-box">
-              <img src="images/16927045540.jpeg" alt="">
+              <img src="images/cardImg.jpeg" alt="">
             </div>
             <div class="detail-box">
               <h5 class="mb-2">

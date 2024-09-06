@@ -16,18 +16,19 @@
   <div class="container">
     <div class="heading_daftar_kegiatan heading_center text-center">
       <h2 class="">
-        Daftar  Kegiatan <br>{{$posyandu->nama}}
+        Daftar Kegiatan <br>{{$posyandu->nama}}
       </h2>
         @if($kegiatans->isEmpty())
             <p>Belum ada kegiatan yang terdaftar untuk posyandu ini.</p>
         @else
     </div>
-    @foreach($kegiatans as $kegiatan)
+    
     <section class="container my-5">
+      @foreach($kegiatans as $kegiatan)
         <div class="row justify-content-center about-us">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <!-- Card dengan Video YouTube dan Konten -->
-                <div class="card kegiatan-card d-flex flex-md-row shadow-box">
+                <div class="card kegiatan-card shadow-box">
                   <!-- Card Body -->
                   <div class="card-body isi-kegiatan">
                       <h5 class="card-title">{{ $kegiatan->judul }}</h5>
@@ -42,8 +43,9 @@
                 </div>
             </div>
         </div>
+        @endforeach
     </section>
-    @endforeach
+
     @endif
   </div>
 </section>

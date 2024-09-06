@@ -35,9 +35,14 @@ class KegiatanController extends Controller
     {
         $request->validate([
             'posyandu_id' => 'required|exists:posyandu,id',
-            'judul' => 'required|string|max:255',
-            'deskripsi' => 'required|string',
+            'judul' => 'required|string|max:50',
+            'deskripsi' => 'required|string|max:80',
             'tanggal' => 'required|date',
+        ], 
+        [
+            'judul.max' => 'Judul kegiatan tidak boleh lebih dari 50 karakter.',
+            'deskripsi.max' => 'Isi deskripsi maksimal 80 karakter.',
+            'tanggal.required' => 'Silahkan isi tanggal.',
         ]);
 
         // Simpan kegiatan
@@ -63,17 +68,43 @@ class KegiatanController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(kegiatan $kegiatan)
+    public function edit($id)
     {
-        //
+        $kegiatan = Kegiatan::findOrFail($id); // Cari kegiatan berdasarkan ID
+        return view('admin.posyandu.kegiatan.edit', compact('kegiatan'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, kegiatan $kegiatan)
+    public function update(Request $request, $id)
     {
-        //
+        // Validasi input
+        $request->validate([
+            'judul' => 'required|string|max:50',
+            'deskripsi' => 'required|max:80',
+            'tanggal' => 'required|date',
+        ], 
+        [
+            'judul.max' => 'Judul kegiatan tidak boleh lebih dari 50 karakter.',
+            'deskripsi.max' => 'Isi deskripsi maksimal 80 karakter.',
+            'tanggal.required' => 'Silahkan isi tanggal.',
+        ]);
+
+        // Temukan kegiatan berdasarkan ID
+        $kegiatan = Kegiatan::findOrFail($id);
+
+        // Update data kegiatan
+        $kegiatan->judul = $request->input('judul');
+        $kegiatan->deskripsi = $request->input('deskripsi');
+        $kegiatan->tanggal = $request->input('tanggal');
+
+        // Simpan perubahan ke database
+        $kegiatan->save();
+        
+        
+        // Redirect ke halaman kegiatan posyandu
+        return redirect()->route('admin.posyandu.show', $kegiatan->posyandu_id)->with('success', 'Artikel berhasil diperbarui.');
     }
 
     /**

@@ -23,7 +23,7 @@
                     <main class="container mt-4">
                         <form class="form-artikel" action="{{ route('admin.artikel.update', $artikel->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
-                            {{ method_field('PUT') }}
+                            @method('PUT')
                             <div class="form-group">
                                 <div class="mb-3">
                                     <label for="judul" class="form-label">Judul</label>

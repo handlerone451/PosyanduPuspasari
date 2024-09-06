@@ -65,7 +65,7 @@
                                         <td>{{ \Illuminate\Support\Str::limit($kegiatan->deskripsi, 50, '...') }}</td>
                                         <td>{{ \Carbon\Carbon::parse($kegiatan->tanggal)->format('d M Y') }}</td>
                                         <td>
-                                            <a href="{{ route('admin.kegiatan.edit', $kegiatan->id) }}" class="btn btn-warning btn-sm text-white" style="padding: 3px 3px;">Edit Kegiatan</a>
+                                            <a href="{{ route('admin.edit.kegiatan', $kegiatan->id) }}" class="btn btn-warning btn-sm text-white" style="padding: 3px 3px;">Edit Kegiatan</a>
                                             <form action="{{ route('admin.kegiatan.destroy', $kegiatan->id) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus kegiatan ini?');" style="display:inline-block;">
                                                 @csrf
                                                 @method('DELETE')

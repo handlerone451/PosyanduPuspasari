@@ -40,7 +40,9 @@ Route::middleware('auth')->group(function () {
         ->name('info_sekilas.edit_link_video');
         Route::put('/info_sekilas/{info_sekilas}/edit-link-video', [InfoSekilasController::class, 'youtube_link'])
         ->name('info_sekilas.youtube_link');
-
+        // Route untuk meng-update kegiatan
+        Route::get('posyandu/kegiatan/{id}/edit', [KegiatanController::class, 'edit'])->name('edit.kegiatan');
+        Route::put('/kegiatan/{id}', [KegiatanController::class, 'update'])->name('update.kegiatan');
     });
 });
 
