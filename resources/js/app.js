@@ -1,9 +1,5 @@
 import './bootstrap';
 
-import * bootstrap from 'bootstrap';
-
-import 'trix';
-
 
 import Alpine from 'alpinejs';
 

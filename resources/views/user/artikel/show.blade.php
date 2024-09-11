@@ -11,7 +11,7 @@
 <!-- food section -->
 
 <div class="container col-lg-8 mx-auto">
-    <div class="heading_daftar_kegiatan heading_center text-center mt-4">
+    <div class="heading_daftar_artikel heading_center text-center mt-4">
         <h2 class="">
          {{ $artikel->judul }}
         </h2>

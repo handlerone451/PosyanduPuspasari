@@ -11,7 +11,7 @@
 <!-- food section -->
 
 <div class="container mt-4">
-    <div class="heading_daftar_kegiatan heading_center text-center">
+    <div class="heading_daftar_artikel heading_center text-center">
         <h2>Artikel terbaru</h2>
         <!-- Form Pencarian -->
         <form action="{{ route('artikel.frontshow') }}" method="GET">

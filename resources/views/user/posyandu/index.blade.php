@@ -25,7 +25,7 @@
     
     <section class="container my-5">
       @foreach($kegiatans as $kegiatan)
-        <div class="row justify-content-center about-us">
+        <div class="about-us kegiatan-section">
             <div class="col-md-6">
                 <!-- Card dengan Video YouTube dan Konten -->
                 <div class="card kegiatan-card shadow-box">

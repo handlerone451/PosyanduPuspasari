@@ -78,11 +78,11 @@
         <div class="col-md-6  ">
           <div class="box ">
             <div class="img-box">
-              <img src="images/cardImg.jpeg" alt="">
+              <img src="images/cardImg.jpg" alt="">
             </div>
             <div class="detail-box">
               <h5 class="mb-2">
-                Kegiatan Posyandu Disekitar
+                Kegiatan Posyandu
               </h5>
               <a href="{{ route('/DaftarPosyandu') }}">Lihat Kegiatan</a>
             </div>
@@ -174,31 +174,4 @@
   </section>
   
   <!-- end Artikel section -->
-
-<!-- about section -->
-
-<section class="about_section layout_padding mb-4 mt-5">
-  <div class="container  ">
-
-    <div class="row">
-      <div class="col-md-6">
-        <div class="img-box">
-          <img src="images/logo.png" alt="">
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="detail-box">
-          <p>
-            Bersama Posyandu, kita ciptakan masa depan yang sehat untuk si kecil. Mari kita tingkatkan kualitas hidup bersama, dengan Posyandu sebagai pusat informasi dan pelayanan kesehatan yang ramah dan bersahabat.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- end about section -->
-
-
-
 @endsection

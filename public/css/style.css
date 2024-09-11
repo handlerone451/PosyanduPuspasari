@@ -23,6 +23,13 @@ input[type="file"] {
   -webkit-text-stroke: 2px black; /* Memberikan outline hitam pada teks */
 }
 
+.kegiatan-section{
+  display: flex;
+  justify-content: center; /* Mengatur secara horizontal */
+  align-items: center;    /* Mengatur secara vertikal */
+  margin-bottom: -100px;
+}
+
 .btn-container {
   position: absolute;
   bottom: 20px; /* Jarak dari bawah */
@@ -144,7 +151,15 @@ a {
 
 .heading_daftar_kegiatan h2 {
   position: relative;
-  margin-bottom: 400px !important;
+  margin-top: -50px;
+  margin-bottom: 380px !important;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.heading_daftar_artikel h2 {
+  position: relative;
+  margin-bottom: 10px;
   font-size: 2.5rem;
   font-weight: bold;
 }
@@ -300,7 +315,7 @@ a:focus {
 }
 
 .about-us {
-  margin-top: 250px;
+  margin-top: 380px;
 }
 
 .about-us-text{
