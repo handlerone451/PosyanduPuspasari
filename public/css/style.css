@@ -329,6 +329,13 @@ a:focus {
   align-items: center;
 }
 
+.table-posyandu {
+  overflow: hidden; /* Menjaga gambar tetap dalam rounded corners */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .card {
   border: none; /* Menghilangkan border default card */
   border-radius: 15px; /* Rounded corners */
