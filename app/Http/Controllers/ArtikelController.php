@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\artikel;
-use App\Models\InfoSekilas;
-use App\Models\Posyandu;
+use App\Models\infosekilas;
+use App\Models\posyandu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Purifier;

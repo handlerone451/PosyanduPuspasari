@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\infosekilas;
 
-class infosekilasSeeder extends Seeder
+class InfoSekilasSeeder extends Seeder
 {
     /**
      * Run the database seeds.
