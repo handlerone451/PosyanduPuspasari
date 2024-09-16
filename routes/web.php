@@ -4,7 +4,7 @@ use App\Http\Controllers\PosyanduController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\InfoSekilasController;
+use App\Http\Controllers\InfosekilasController;
 use Illuminate\Support\Facades\Route;
 
 
