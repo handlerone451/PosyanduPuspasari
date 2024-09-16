@@ -1,6 +1,6 @@
--- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.19, for Win64 (x86_64)
 --
--- Host: localhost    Database: apotek
+-- Host: localhost    Database: posyandu
 -- ------------------------------------------------------
 -- Server version	8.0.30
 
@@ -33,7 +33,7 @@ CREATE TABLE `artikel` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `artikel_slug_unique` (`slug`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -148,7 +148,7 @@ CREATE TABLE `info_sekilas` (
 
 LOCK TABLES `info_sekilas` WRITE;
 /*!40000 ALTER TABLE `info_sekilas` DISABLE KEYS */;
-INSERT INTO `info_sekilas` VALUES (1,15,99,1200,350,'https://www.youtube.com/embed/aRnbQ5taC8c?si=9S5-KY6UYXonbpMo','2024-08-30 07:27:47','2024-09-02 01:24:37');
+INSERT INTO `info_sekilas` VALUES (1,15,99,1200,350,NULL,'2024-09-16 13:23:03','2024-09-16 13:23:03');
 /*!40000 ALTER TABLE `info_sekilas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -230,7 +230,7 @@ CREATE TABLE `kegiatan` (
   PRIMARY KEY (`id`),
   KEY `kegiatan_posyandu_id_foreign` (`posyandu_id`),
   CONSTRAINT `kegiatan_posyandu_id_foreign` FOREIGN KEY (`posyandu_id`) REFERENCES `posyandu` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -396,7 +396,7 @@ CREATE TABLE `posyandu` (
 
 LOCK TABLES `posyandu` WRITE;
 /*!40000 ALTER TABLE `posyandu` DISABLE KEYS */;
-INSERT INTO `posyandu` VALUES (1,'Posyandu Melati Rw 01','Dusun Jambatan RT 02/RW 01 Desa Puspasari, Citeureup','01','melati01.jpeg','2024-08-30 07:27:47','2024-08-30 07:27:47'),(2,'Posyandu 2','Dusun Jambatan RT01/ RW 02 Desa Puspasari  kec.Citeureup, kab Bogor','02','Anggrek02.jpeg','2024-08-30 07:27:47','2024-08-30 07:27:47'),(3,'Posyandu Kemuning Rw 03','Jalan Keranggan RT 1 RW 3','03','kemuning03.jpeg','2024-08-30 07:27:47','2024-08-30 07:27:47'),(4,'Posyandu Mawar Rw 04','jl karanggan RT 03/04..puspasari ','04','mawar06.jpeg','2024-08-30 07:27:47','2024-08-30 07:27:47'),(5,'Posyandu dahlia rw 05','Gg. Musolah Gg. AL-Ikhwan No.22, RT.03/RW.05, Puspasari, Kec. Citeureup, Kabupaten Bogor, Jawa Barat 16810','05','Dahlia05.jpeg','2024-08-30 07:27:47','2024-08-30 07:27:47'),(6,'Posyandu Seroja I Rw 6','Kp Jl. Raya Kamurang, Puspanegara, Kec. Citeureup, Kabupaten Bogor, Jawa Barat 16810','06','mawar06.jpeg','2024-08-30 07:27:47','2024-08-30 07:27:47'),(7,'Posyandu Seroja II Rw 07','Dusun kamurang gg seroja rt 02 rw 07','07','Seroja07.jpeg','2024-08-30 07:27:47','2024-08-30 07:27:47'),(8,'Posyandu cempaka wangi Rw 08','Jln R.E Sulaeman kampung kebon kopi Rt 02 /Rw 08 Desa Puspasari .Kecamatan Citeureup Kabupaten Bogor','08','Merpati10.jpeg','2024-08-30 07:27:47','2024-08-30 07:27:47');
+INSERT INTO `posyandu` VALUES (1,'Posyandu Melati Rw 01','Dusun Jambatan RT 02/RW 01 Desa Puspasari, Citeureup','01','melati01.jpeg','2024-09-16 13:23:03','2024-09-16 13:23:03'),(2,'Posyandu 2','Dusun Jambatan RT01/ RW 02 Desa Puspasari  kec.Citeureup, kab Bogor','02','Anggrek02.jpeg','2024-09-16 13:23:03','2024-09-16 13:23:03'),(3,'Posyandu Kemuning Rw 03','Jalan Keranggan RT 1 RW 3','03','kemuning03.jpeg','2024-09-16 13:23:03','2024-09-16 13:23:03'),(4,'Posyandu Mawar Rw 04','jl karanggan RT 03/04..puspasari ','04','mawar06.jpeg','2024-09-16 13:23:03','2024-09-16 13:23:03'),(5,'Posyandu dahlia rw 05','Gg. Musolah Gg. AL-Ikhwan No.22, RT.03/RW.05, Puspasari, Kec. Citeureup, Kabupaten Bogor, Jawa Barat 16810','05','dahlia05.jpeg','2024-09-16 13:23:03','2024-09-16 13:23:03'),(6,'Posyandu Seroja I Rw 6','Kp Jl. Raya Kamurang, Puspanegara, Kec. Citeureup, Kabupaten Bogor, Jawa Barat 16810','06','mawar06.jpeg','2024-09-16 13:23:03','2024-09-16 13:23:03'),(7,'Posyandu Seroja II Rw 07','Dusun kamurang gg seroja rt 02 rw 07','07','Seroja07.jpeg','2024-09-16 13:23:03','2024-09-16 13:23:03'),(8,'Posyandu cempaka wangi Rw 08','Jln R.E Sulaeman kampung kebon kopi Rt 02 /Rw 08 Desa Puspasari .Kecamatan Citeureup Kabupaten Bogor','09','Merpati10.jpeg','2024-09-16 13:23:03','2024-09-16 13:23:03');
 /*!40000 ALTER TABLE `posyandu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -450,7 +450,7 @@ CREATE TABLE `roles` (
 
 LOCK TABLES `roles` WRITE;
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
-INSERT INTO `roles` VALUES (1,'admin','web','2024-08-30 07:27:46','2024-08-30 07:27:46');
+INSERT INTO `roles` VALUES (1,'admin','web','2024-09-16 13:23:02','2024-09-16 13:23:02');
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -480,7 +480,6 @@ CREATE TABLE `sessions` (
 
 LOCK TABLES `sessions` WRITE;
 /*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
-INSERT INTO `sessions` VALUES ('jbg2SwjMYeVMWES2xwDmRUaRxTPSlh5dABkZrnun',1,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0','YTo0OntzOjY6Il90b2tlbiI7czo0MDoiM2Z4RmlOMHZ3bjlKc2oyRDJwT1o3elZRd09Ydkh6VzFXWjNkQ0ZrNCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTk6Imh0dHA6Ly9wb3N5YW5kdS5jb20iO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=',1725613696),('Mf3yt1i1bR0YPaAUX5gPKXEzvoX8gx6l5NTYMQiN',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0','YTozOntzOjY6Il90b2tlbiI7czo0MDoiYWp3Mk1hRGFzbXpRVHQ5RUZZMDY5S3RBaWpxWkgxT3NGSUpkbWo3RiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTk6Imh0dHA6Ly9wb3N5YW5kdS5jb20iO319',1726057918),('o2jB5AYyqnGxVAudb7RHe102nBWMnnhl96Cz0m2s',NULL,'192.168.0.80','Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoiS2VWTnpGWkJEM1Zlb1RCV3VWODZ2SFBXeEE3VWJQYkxGVk01NG02ZSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly8xOTIuMTY4LjAuODA6ODAwMC9hcnRpa2VsIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==',1725613754),('sXXi6XVwZs7axx2EySHliQOpKyVjZ9i75FCCVeg9',1,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0','YTozOntzOjY6Il90b2tlbiI7czo0MDoidDhSc1J2UjNMNTFOWmZHZXB0RlREWWZ3bktCRmh4U3kyOFVSZVRiUSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTAzOiJodHRwOi8vcG9zeWFuZHUuY29tL2FydGlrZWwvcG9zeWFuZHUtamFkaS1nYXJkYS10ZXJkZXBhbi11bnR1ay1tZW1hc3Rpa2FuLXNldGlhcC13YXJnYS1iaXNhLXRldGFwLXNlaGF0Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==',1725689930);
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -511,12 +510,12 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin','puspasari@gmail.com',NULL,'$2y$12$FAgqiW53DqmXPBjzNhjiYOQ/JPKdO.P5Y6gFX2.7rfXdfMz3pHaJO','v44upQeyhwy1A1obVJtikiY1A4vL2FX1x6p0QpaifVO8a8LodXOhKr3O7OKV','2024-08-30 07:27:47','2024-08-30 07:27:47');
+INSERT INTO `users` VALUES (1,'Admin Posyandu Puspasari','puspasari@PosyanduPuspasari.com',NULL,'$2y$12$Qo2U7cbma2FRT0SVAWT0reIGEzuA6FNLFIVUR2HxDbv7ol3n/RIJ6',NULL,'2024-09-16 13:23:03','2024-09-16 13:23:03');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Dumping routines for database 'apotek'
+-- Dumping routines for database 'posyandu'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -528,4 +527,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-11 19:33:15
+-- Dump completed on 2024-09-16 20:23:27

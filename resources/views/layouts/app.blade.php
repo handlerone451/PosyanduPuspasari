@@ -20,7 +20,7 @@
         <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
 
         {{-- css --}}
-        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/style.css') }}" rel="stylesheet">
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">

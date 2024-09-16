@@ -74,6 +74,10 @@ class ArtikelController extends Controller
 
     public function edit($id)
     {
+        // Validasi ID
+        if (!is_numeric($id)) {
+            abort(404, 'ID tidak valid');
+        }
         $artikel = Artikel::findOrFail($id);
         return view('admin.artikel.edit', compact('artikel'));
     }
@@ -92,7 +96,7 @@ class ArtikelController extends Controller
 
 
     public function frontShow(Request $request)
-    {
+    {   
         // Ambil nilai query pencarian dari input
         $title = "Artikel";
         $search = $request->input('search');
@@ -111,7 +115,7 @@ class ArtikelController extends Controller
     }
 
     public function showartikel($slug)
-    {
+    {   
         $artikel = Artikel::where('slug', $slug)->firstOrFail();
         $title = "Artikel";
         return view('user.artikel.show', compact('artikel', 'title'));
@@ -163,6 +167,10 @@ class ArtikelController extends Controller
      */
     public function destroy($id)
     {
+        // Validasi ID
+        if (!is_numeric($id)) {
+            abort(404, 'ID tidak valid');
+        }
         // Cari artikel berdasarkan ID
         $artikel = Artikel::findOrFail($id);
 

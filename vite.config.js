@@ -8,6 +8,7 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/js/app.js',
             ],
+            buildDirectory: 'build', // Menentukan folder build
             refresh: true,
         }),
     ],
