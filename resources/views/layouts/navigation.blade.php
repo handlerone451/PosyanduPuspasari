@@ -92,9 +92,6 @@
             </div>
 
             <div class="mt-3 space-y-1">
-                <x-responsive-nav-link :href="route('admin.posyandu.index')" :active="request()->routeIs('admin.posyandu.index')">
-                    {{ __('Manage products') }}
-                </x-responsive-nav-link>
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf

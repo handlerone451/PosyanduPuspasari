@@ -23,7 +23,7 @@ class posyandu extends Model
      */
     public function kegiatan()
     {
-        return $this->hasMany(Kegiatan::class);
+        return $this->hasMany(kegiatan::class);
     }
 }
 
