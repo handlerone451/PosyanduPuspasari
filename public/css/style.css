@@ -19,8 +19,14 @@ input[type="file"] {
 .welcome-text h1 {
   color: white;
   font-weight: bold;
-  text-align: left;
-  -webkit-text-stroke: 2px black; /* Memberikan outline hitam pada teks */
+  text-align: center;
+  background-color: #cb28aa; /* Warna latar belakang */
+            padding: 10px 20px; /* Ruang di sekitar teks */
+            border-radius: 50px; /* Membuat bentuk kapsul */
+            display: inline-block; /* Supaya hanya selebar teks */
+            font-size: 23px; /* Ukuran teks */
+            font-family: Arial, sans-serif; /* Jenis font */
+            margin-bottom: 100px;
 }
 
 .kegiatan-section{
@@ -493,7 +499,7 @@ a:focus {
 }
 
 .welcome-text {
-  color: white;
+  color: black;
   margin-top: 15%;
 }
 @media (max-width: 767.98px) {
@@ -815,7 +821,7 @@ a:focus {
 
 .offer_section {
   position: relative;
-  padding-top: 45px;
+  padding-top: 45px !important;
 }
 
 .offer_section .box {

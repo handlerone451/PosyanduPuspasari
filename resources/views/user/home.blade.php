@@ -14,10 +14,10 @@
     <img src="images/Anggrek02.jpeg" alt="">
   </div>
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
       <div class="col-md-7 col-lg-6 ">
         <div class="welcome-text">
-          <h1>Selamat Datang di Portal Website Posyandu Desa Puspasari</h1>
+          <h1>SELAMAT DATANG DI PORTAL WEBSITE POSYANDU DESA PUSPASARI</h1>
           </div>
         </div>
       </div>
